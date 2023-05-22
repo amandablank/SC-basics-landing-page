@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Amigurumi</title>
+    <title>Learn more about Amigurumi</title>
     <style>
       body {
         background-color: rgb(177, 175, 175);
@@ -13,6 +13,13 @@
       a {
         text-align: center;
         display: inline;
+        color: #f95959;
+      }
+
+      a:hover {
+        text-align: center;
+        display: inline;
+        color: #e3e3e3;
       }
 
       button {
@@ -25,19 +32,19 @@
         border-radius: 14px;
         margin: 50px auto;
         padding: 10px 20px 10px 20px;
-        transition: all 450ms ease;
       }
 
       button:hover {
         background: #f95959;
         color: #233142;
         cursor: pointer;
+        transition: all 300ms ease;
       }
 
       hr {
-        border: 3px dotted #e3e3e3;
-        margin-bottom: 30px;
-        margin-top: 35px;
+        border: 3px dashed #e3e3e3;
+        margin-bottom: 40px;
+        margin-top: 40px;
       }
 
       h1 {
@@ -45,9 +52,9 @@
         text-align: center;
         line-height: bold;
         display: block;
-        border: 8px solid #f95959;
+        border: 6px solid #f95959;
         border-radius: 16px;
-        padding: 15px;
+        padding: 20px;
         margin: 15px 200px;
         background-color: #455d7a;
       }
@@ -57,10 +64,10 @@
         text-align: center;
         line-height: bold;
         display: block;
-        border: 8px solid #f95959;
+        border: 6px solid #f95959;
         border-radius: 16px;
+        margin: 15px 200px;
         padding: 15px;
-        margin: 15px auto;
         background-color: #455d7a;
       }
 
@@ -86,6 +93,11 @@
         display: block;
         color: #e3e3e3;
         line-height: 28px;
+        margin-top: 15px;
+      }
+
+      .text1 p {
+        line-height: 0.8;
       }
 
       .text2 {
@@ -102,25 +114,23 @@
       <hr />
       <img
         src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/046/661/original/amigurumi_amanda.jpg?1663765883"
-        alt="My first Amigurumi project - Amanda"
+        alt="Amanda Cristina Blankenburg's first Amigurumi project (grey cat)"
         width="400"
       />
       <br />
       <span class="text1">
-        <em>
-          This cat is my first amigurumi project. That's why it has some
-          defects, like the crooked ear.
-        </em>
-        <em>
-          But this small project has a special place in my heart, I started
-          learning amigurumi during the Covid-19 pandemic and it has become one
-          of my favorite hobbies.
-        </em>
+        <strong>
+          <p>This grey cat is my first Amigurumi project.</p>
+          <p>
+            I made it during the COVID-19 pandemic, when I started learning to
+            crochet Amigurumi.
+          </p>
+        </strong>
       </span>
       <hr />
       <span class="text2">
         <strong>
-          <h2>Read some information about the Amigurumi Art</h2>
+          <h2>What is Amigurumi?</h2>
         </strong>
         <p>
           Amigurumi is the Japanese art of knitting or crocheting small, stuffed
@@ -128,41 +138,34 @@
           crocheted out of yarn or thread, using the basic techniques of crochet
           (such as single crochet stitch, double crochet, and invisible
           decrease). Amigurumi can be worked as one piece or, more usually, in
-          sections which are sewed or crocheted together. Stuffing can be
-          standard polyester, wool, or cotton craft stuffing, but may be
-          improvised from other materials. Wires, such as pipe cleaners or
-          floral wire, may be used to make the doll posable. Plastic pellets,
-          glass pebbles, and even stones may be inserted beneath the stuffing to
-          distribute weight at the bottom of the figure.
+          sections which are sewed or crocheted together.
         </p>
         <a href="https://pt.wikipedia.org/wiki/Amigurumi" target="blank">
           Learn more on Wikipedia
         </a>
         <br />
-        <button>Click here 🧶🐱</button>
+        <button>Do you have questions? 🧶</button>
         <br />
         <strong> This page was built by Amanda Cristina Blankenburg </strong>
       </span>
     </div>
     <script>
-      function clickHereButton() {
-        let amigurumi = prompt(
-          "Would you like to learn more about the Amigurumi art?"
-        );
-        amigurumi = amigurumi.toLowerCase().trim();
-        if (amigurumi === "yes") {
+      function onClick() {
+        let hobby = prompt("Are you interested in Amigurumi?");
+        hobby = hobby.toLowerCase().trim();
+        if (hobby === "yes") {
           alert(
-            "Please, feel free to contact me at example@email.com and I will be happy to send you more information."
+            "That's great. Research shows that people with a hobbie like Amigurumi are less likely to suffer from stress, low mood and depression."
           );
         } else {
           alert(
-            "I am glad that you visited my page. If you want to learn more about Amigurumi, please contact me at example@email.com"
+            "That's a shame. A hobby like Amigurumi can make you feel happier and more relaxed. If you want to learn more about this technique, please contact me at example@email.com"
           );
         }
       }
 
       let clickButton = document.querySelector("button");
-      clickButton.addEventListener("click", clickHereButton);
+      clickButton.addEventListener("click", onClick);
     </script>
   </body>
 </html>
